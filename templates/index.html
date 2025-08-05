@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bazi Day Master Finder</title>
+</head>
+<body>
+    <h1>🔮 Bazi Day Master Finder</h1>
+    <form method="POST">
+        <label>Year: <input type="number" name="year" required></label><br>
+        <label>Month: <input type="number" name="month" required></label><br>
+        <label>Day: <input type="number" name="day" required></label><br>
+        <label>Hour (0-23): <input type="number" name="hour" required></label><br>
+        <button type="submit">Find My Day Master</button>
+    </form>
+
+    {% if result %}
+        <h2>🧧 Your Day Master: {{ result.day_master }}</h2>
+        <h2>🌿 Full Day Pillar: {{ result.day_pillar }}</h2>
+    {% endif %}
+</body>
+</html>
+
